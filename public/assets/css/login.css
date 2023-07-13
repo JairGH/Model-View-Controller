@@ -17,6 +17,7 @@ nav {
   box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
   overflow: hidden;
   margin: 10px;
+  background-color: #aaa6a4;
 }
 
 .card-header {
@@ -55,6 +56,10 @@ nav {
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+#text {
+  color: black;
 }
 
 .btn {
