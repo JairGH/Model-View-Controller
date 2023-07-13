@@ -2,7 +2,10 @@
   margin: 0;
   padding: 0;
   border: 0;
-  background-color: rgb(231, 231, 231);
+}
+
+nav {
+    background-color: #aaa6a4;
 }
 
 /*! Login */
