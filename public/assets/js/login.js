@@ -1,7 +1,7 @@
 const signupFormHandler = async (event) => {
   event.preventDefault();
   console.log("User has signup");
-  const userName = document.querySelector("#username").value.trim();
+  const userName = document.querySelector("#email").value.trim();
   const password = document.querySelector("#password").value.trim();
 
   if (email && password) {
