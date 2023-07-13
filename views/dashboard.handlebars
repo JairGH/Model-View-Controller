@@ -32,7 +32,7 @@
         </div>
     </nav>
     {{!-- !Create new post card --}}
-    <section style="display: none;" id="create-post">
+    <section style="display: none;" id="create-card">
         <div class="card  mt-3">
             <h5 class="card-header">Create New Post</h5>
             <div class="card-body">
@@ -45,16 +45,18 @@
                 <div class="input-group">
                     <textarea class="form-control" aria-label="With textarea"></textarea>
                 </div>
-                <a href="#" class="btn btn-secondary d-flex justify-content-center mt-3">Create</a>
+                <a href="#" class="btn btn-secondary d-flex justify-content-center mt-3" id="create-btn">Create</a>
+
+                <a href="#" class="btn btn-secondary d-flex justify-content-center mt-3" id="cancel-btn">Cancel</a>
             </div>
         </div>
     </section>
     {{!-- !Edit post btn --}}
-    <div>
+    <div style="display: none;">
     <a href="#" class="btn btn-secondary d-flex justify-content-center mt-3">Edit post that has been already created </a>
     </div>
     {{!-- !Edit post card--}}
-    <section>
+    <section style="display: none;">
         <div class="card  mt-3">
             <h5 class="card-header">Edit Post</h5>
             <div class="card-body">
@@ -75,8 +77,10 @@
     <div>
         {{!-- ?Create post --}}
         <div class="d-flex justify-content-center mt-3">
-            <button type="button" class="btn btn-secondary">+ New Post</button>
+            <button type="button" class="btn btn-secondary" id="new-post">+ New Post</button>
         </div>
     </div>
+
+    <script src="/assets/js/dash.js"></script>
 </body>
 </html>
