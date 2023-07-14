@@ -35,6 +35,19 @@ router.post("/login", async (req, res) => {
   }
 });
 
+router.post("/", async (req, res) => {
+  try {
+    const newUser = await User.create(req.body)
+    req.session.save(() => {
+      req.session.user_id = newUser.id;
+      req.session.logged_in = true;
+      res.json({ user: newUser, message: "You are now logged in!" });
+    })
+  } catch (err) {
+    res.status(500).json(err)
+  }
+})
+
 router.post("/logout", (req, res) => {
   if (req.session.logged_in) {
     // Remove the session variables
