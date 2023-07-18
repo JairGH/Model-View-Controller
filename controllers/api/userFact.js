@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { Fact } = require("../../models");
 
-router.post("/", (req, res) => {
+router.post("/meh", (req, res) => {
   Fact.create({
     title: req.body.title,
     text: req.body.text,
