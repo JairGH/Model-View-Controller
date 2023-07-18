@@ -6,3 +6,5 @@ document.getElementById("new-post").addEventListener("click", function () {
 document.getElementById("cancel-btn").addEventListener("click", function () {
   document.getElementById("create-card").style.display = "none";
 });
+
+// * Post

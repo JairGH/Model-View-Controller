@@ -1,8 +1,8 @@
-const User = require('./User');
+const User = require("./User")
+const Fact = require("./Fact")
 
 
-// Project.belongsTo(User, {
-//   foreignKey: 'user_id'
-// });
 
-module.exports = { User };
+
+
+module.exports = { User, Fact }
