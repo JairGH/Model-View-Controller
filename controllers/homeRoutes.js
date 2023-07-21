@@ -1,8 +1,22 @@
+const { Fact, User } = require("../models");
 const router = require("express").Router();
 
 router.get("/", async (req, res) => {
   try {
-    res.render("homepage");
+
+    const factData = await Fact.findAll({
+    // * We get all facts from db
+    }); 
+    
+    const facts = factData.map(facts => {
+      return facts.get({ plain: true })
+      // * Clean data
+    })
+    console.log(facts)  
+    res.render("homepage", {
+      facts,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
